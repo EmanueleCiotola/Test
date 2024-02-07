@@ -34,6 +34,30 @@ window.addEventListener("load", function() {
 
 
 
+
+// gestione swiper conoscenze
+var bloccoCorrente = "bloccoIconeCompetenze__primoBlocco";
+function swipeBloccoIconeCompetenze(bloccoDaMostrare) {
+    if (bloccoCorrente != bloccoDaMostrare) {
+        // rimuovi vecchio blocco
+        var vecchioBlocco = document.querySelectorAll("." + bloccoCorrente);
+        vecchioBlocco.forEach((element) => { element.classList.remove("bloccoCorrente"); });
+
+        // aggiorna blocco mostrato
+        var nuovoBlocco = document.querySelectorAll("." + bloccoDaMostrare);
+        nuovoBlocco.forEach((element) => { element.classList.add("bloccoCorrente"); });
+        bloccoCorrente = bloccoDaMostrare;
+    }
+}
+function swipeAvantiBloccoCompetenze() {
+    if (bloccoCorrente == "bloccoIconeCompetenze__primoBlocco") swipeBloccoIconeCompetenze("bloccoIconeCompetenze__secondoBlocco");
+    else if (bloccoCorrente == "bloccoIconeCompetenze__secondoBlocco") swipeBloccoIconeCompetenze("bloccoIconeCompetenze__terzoBlocco");
+    else if (bloccoCorrente == "bloccoIconeCompetenze__terzoBlocco") swipeBloccoIconeCompetenze("bloccoIconeCompetenze__quartoBlocco");
+    else swipeBloccoIconeCompetenze("bloccoIconeCompetenze__primoBlocco");
+}
+
+
+
 // gestione dei link esterni
 function apriUrl(url) { window.open(url, "_blank"); }
 

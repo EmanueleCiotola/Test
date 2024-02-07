@@ -25,8 +25,8 @@ body, html {
 body.body--loading { overflow: hidden; }
 
 section { padding-top: 3rem; }
-@media (max-width: 480px) {  section { padding-top: 1.5rem; } }
 @media (max-width: 584px) {  section { padding-top: 2rem; } }
+@media (max-width: 480px) {  section { padding-top: 1.5rem; } }
 
 .mostrato {
     transition: transform .4s cubic-bezier(0.3, 0, 0.25, 1.5), opacity .4s cubic-bezier(0.3, 0, 0.25, 1.5) !important;
@@ -67,9 +67,9 @@ img, button, input, label, a {
     -ms-user-select: none; /* IE, ms-edge */
 }
 
-@media (max-width: 480px) {  body, html { font-size: calc(13px + 0.390625vw); } h1 { font-size: 2rem; } }
-@media (max-width: 584px) { .large { display: none; } }
 @media (min-width: 585px) { .small { display: none; } }
+@media (max-width: 584px) { .large { display: none; } }
+@media (max-width: 480px) {  body, html { font-size: calc(13px + 0.390625vw); } h1 { font-size: 2rem; } }
 
 
 
@@ -247,19 +247,19 @@ img, button, input, label, a {
 
 #homePage__text { margin-top: 1rem; margin-bottom: 5rem; opacity: 0; transform: translateX(-4rem); transition-delay: 650ms !important; }
 
-@media (max-width: 480px) { #homePage__text { margin-bottom: 6.5rem; } }
 @media (min-width: 584px) { #homePage__fotoPresentazione { width: 7.5rem; } }
 @media (max-height: 584px) {
     #homePage { height: auto; padding-top: 1rem; }
     #homePage__titolo { transition-delay: 300ms !important; }
     #homePage__text { margin-bottom: 1rem; transition-delay: 300ms !important; }
 }
+@media (max-width: 480px) { #homePage__text { margin-bottom: 6.5rem; } }
 /* stile homePage */
 
 
 
 /* stile portfolioPage */
-#portfolioPage { display: flex; justify-content: center; gap: 6.5vw; padding-bottom: 20vh; }
+#portfolioPage { display: flex; justify-content: center; gap: 6.5vw; padding-bottom: 25vh; }
 
 .portfolioPage__progetto {
     background-color: var(--cardColor);
@@ -275,14 +275,14 @@ img, button, input, label, a {
 
 .portfolioPage__progetto p { margin: 1rem 0 2rem 0; }
 
-@media (max-width: 480px) { #portfolioPage { padding-bottom: 5vh !important; } }
-@media (max-width: 584px) { .portfolioPage__progetto { width: 80vw !important; min-width: 280px; padding: 4vh 0; } }
-@media (max-height: 584px) { .portfolioPage__progetto { padding: calc(25px + 4vh) 0; } }
-@media (max-width: 750px) { #portfolioPage { padding-bottom: 13vh !important; } }
 @media (max-width: 1024px) {
     #portfolioPage { flex-direction: column; align-items: center; padding-bottom: 15vh; }
     .portfolioPage__progetto { width: 60vw; max-width: 600px; }
 }
+@media (max-width: 750px) { #portfolioPage { padding-bottom: 12vh !important; } }
+@media (max-width: 584px) { .portfolioPage__progetto { width: 80vw !important; min-width: 280px; padding: 4vh 0; } }
+@media (max-height: 584px) { .portfolioPage__progetto { padding: calc(25px + 4vh) 0; } }
+@media (max-width: 480px) { #portfolioPage { padding-bottom: 5vh !important; } }
 /* stile portfolioPage */
 
 
@@ -290,9 +290,9 @@ img, button, input, label, a {
 /* stile cvPage */
 #cvPage { padding-top: 5vh; padding-bottom: 25vh; overflow-x: hidden; }
 
-#cvPage__titolo { opacity: 0; transform: translateX(4rem);}
+#cvPage__titolo { opacity: 0; transform: translateX(-4rem);}
 
-#cvPage__text { margin-top: 2.5rem; margin-bottom: 2rem; opacity: 0; transform: translateX(-4rem); }
+#cvPage__text { margin-top: 2.5rem; margin-bottom: 2rem; opacity: 0; transform: translateX(4rem); }
 
 #cvPage a { color: var(--disabledTxtColor); cursor: pointer; transition: all .25s cubic-bezier(0.3, 0, 0.25, 1.5); }
 
@@ -301,28 +301,51 @@ img, button, input, label, a {
     border-radius: 1.5rem;
     width: 60vw;
     max-width: 600px;
-    padding: 1.7rem 0 1.7rem 0;
+    padding: 1.7rem 0;
     margin: auto;
     margin-bottom: 2rem;
+    opacity: 0;
+    transform: translateY(4rem);
 }
 
-.competenze__bloccoIcone { display: flex; flex-direction: row; justify-content: center; gap: 2.5rem; margin: 1.5rem 0 1.5rem 0; }
+/* .competenze__spazioCompetenze { display: flex; gap: 100px; } */
+
+@keyframes cambioBloccoIcone {
+    0% { scale: 90%; }
+    100% { scale: 100%; }
+}
+
+.spazioCompetenze__bloccoIconeCompetenze {
+    display: none;
+    animation: .4s cambioBloccoIcone;
+    justify-content: center;
+    gap: 2.4rem;
+    margin: 2rem 0;
+}
+
+.spazioCompetenze__bloccoIconeCompetenze.bloccoCorrente { display: flex; }
 
 .cv__iconaCompetenze { width: 2.5rem; }
 
-#cvPage__bottoneScaricaCV { opacity: 0; transform: translateY(4rem); }
+#cvPage__bottoneScaricaCV { opacity: 0; transform: translateY(4rem); transition-delay: 400ms !important; }
 
-@media (max-width: 1024px) { #cvPage { padding-top: 10vh !important; } .competenze__bloccoIcone { gap: 5vw; } }
-@media (max-width: 875px) { .competenze__bloccoIcone { gap: 4.5vw; } }
-@media (max-width: 750px) { #cvPage { padding-top: 12vh !important; } .cv__iconaCompetenze { width: 2rem; } }
-@media (max-width: 642px) { .competenze__bloccoIcone { gap: 3.5vw; }  }
+.bloccoIconeCompetenze__indicatoreBloccoCompetenze { display: flex; gap: 1rem; justify-content: center; align-items: center; }
+
+.bloccoIconeCompetenze__indicatoreBloccoCompetenze div { height: 10px; width: 10px; border-radius: 50%; background-color: var(--disabledTxtColor); }
+
+.bloccoIconeCompetenze__indicatoreBloccoCompetenze div.bloccoCorrente { background-color: var(--buttonColor); }
+
+@media (min-width: 1295px) { #cvPage { padding-top: 1.5vh !important; } }
+@media (max-width: 1024px) { #cvPage { padding-top: 10vh !important; } .spazioCompetenze__bloccoIconeCompetenze { gap: 4.5vw; margin: 1.5rem 0; } }
+@media (max-width: 875px) { .spazioCompetenze__bloccoIconeCompetenze { gap: 4vw; } }
+@media (max-width: 670px) { #cvPage { padding-top: 12vh !important; } .cv__iconaCompetenze { width: 2rem; } }
 @media (max-width: 584px) {
-    .competenze__bloccoIcone { gap: 4.5vw; }
+    .spazioCompetenze__bloccoIconeCompetenze { gap: 4.5vw; }
     .cvPage__spazioCompetenze { width: 80vw; min-width: 280px; }
     .cv__iconaCompetenze { width: 2.5rem; }
 }
-@media (max-width: 480px) { #cvPage { padding-top: 15vh !important; } .competenze__bloccoIcone { gap: 3vw; } }
-@media (max-width: 400px) { .competenze__bloccoIcone { gap: 3vw; } }
+@media (max-width: 480px) { #cvPage { padding-top: 15vh !important; } }
+@media (max-width: 400px) { .spazioCompetenze__bloccoIconeCompetenze { gap: 3.5vw; } }
 /* stile cvPage */
 
 
@@ -330,9 +353,9 @@ img, button, input, label, a {
 /* stile socialPage */
 #socialPage { padding-bottom: 23vh; overflow-x: hidden; }
 
-#socialPage__titolo { opacity: 0; transform: translateX(-4rem); }
+#socialPage__titolo { opacity: 0; transform: translateX(4rem); }
 
-#socialPage__text { margin-top: 2.5rem; margin-bottom: 2rem; opacity: 0; transform: translateX(4rem); }
+#socialPage__text { margin-top: 2.5rem; margin-bottom: 2rem; opacity: 0; transform: translateX(-4rem); }
 
 .socialPage__socialSpace {
     display: grid;
@@ -396,9 +419,9 @@ img, button, input, label, a {
 /* stile contattiPage */
 #contattiPage { padding-bottom: 37vh; overflow-x: hidden; }
 
-#contattiPage__titolo { opacity: 0; transform: translateX(4rem);}
+#contattiPage__titolo { opacity: 0; transform: translateX(-4rem);}
 
-#contattiPage__text { margin-top: 2.5rem; margin-bottom: 2rem; opacity: 0; transform: translateX(-4rem); }
+#contattiPage__text { margin-top: 2.5rem; margin-bottom: 2rem; opacity: 0; transform: translateX(4rem); }
 
 #contattiPage__bottoneContattami { opacity: 0; transform: translateY(4rem); }
 /* stile contattiPage */
