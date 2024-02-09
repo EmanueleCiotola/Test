@@ -4,7 +4,7 @@ window.addEventListener("load", function() {
 
     // loadingScreen di almeno un secondo anche con caricamenti veloci
     var loadTime = Date.now() - performance.timeOrigin;
-    var delay = Math.max(2500 - loadTime, 0);
+    var delay = Math.max(2000 - loadTime, 0);
 
     setTimeout(function() {
         // rimozione loadingScreen
@@ -31,30 +31,6 @@ window.addEventListener("load", function() {
         document.body.classList.remove("body--loading");
     }, delay);
 });
-
-
-
-
-// gestione swiper conoscenze
-var bloccoCorrente = "bloccoIconeCompetenze__primoBlocco";
-function swipeBloccoIconeCompetenze(bloccoDaMostrare) {
-    if (bloccoCorrente != bloccoDaMostrare) {
-        // rimuovi vecchio blocco
-        var vecchioBlocco = document.querySelectorAll("." + bloccoCorrente);
-        vecchioBlocco.forEach((element) => { element.classList.remove("bloccoCorrente"); });
-
-        // aggiorna blocco mostrato
-        var nuovoBlocco = document.querySelectorAll("." + bloccoDaMostrare);
-        nuovoBlocco.forEach((element) => { element.classList.add("bloccoCorrente"); });
-        bloccoCorrente = bloccoDaMostrare;
-    }
-}
-function swipeAvantiBloccoCompetenze() {
-    if (bloccoCorrente == "bloccoIconeCompetenze__primoBlocco") swipeBloccoIconeCompetenze("bloccoIconeCompetenze__secondoBlocco");
-    else if (bloccoCorrente == "bloccoIconeCompetenze__secondoBlocco") swipeBloccoIconeCompetenze("bloccoIconeCompetenze__terzoBlocco");
-    else if (bloccoCorrente == "bloccoIconeCompetenze__terzoBlocco") swipeBloccoIconeCompetenze("bloccoIconeCompetenze__quartoBlocco");
-    else swipeBloccoIconeCompetenze("bloccoIconeCompetenze__primoBlocco");
-}
 
 
 

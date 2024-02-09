@@ -10,7 +10,7 @@ function goTo(daAttivare) {
 
 
 // gestione dello scroll
-const navSections = document.querySelectorAll("#homePage, #portfolioPage, #cvPage, #socialPage, #contattiPage");
+const navSections = document.querySelectorAll("#homePage, #portfolioPage, #cvPage, #contattiPage");
 const navLinks = document.querySelectorAll("#header__menu a");
 let currentNavSectionIndex = 0;
 function scrolling() {
@@ -45,7 +45,7 @@ function closeMenu() {
         modalPopUp.classList.remove("modalPopUp--open");
     }
 }
-function screenResize() { if (window.innerWidth >= 450) closeMenu(); }
+function screenResize() { if (window.innerWidth >= 601) closeMenu(); }
 modalPopUp.addEventListener('click', closeMenu, {passive: true});
 
 

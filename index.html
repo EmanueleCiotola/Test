@@ -9,17 +9,17 @@
     <meta name="google-site-verification" content="W4m6-Cg3xkpEOSg0rzPIgE6C3gl7yw95aOWXSdd87gM" />
 
     <!-- favicon per i vari dispositivi (anche icone sito aggiunto a desktop) -->
-    <link rel="apple-touch-icon" sizes="180x180" href="assets/icons/favicon/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="assets/icons/favicon/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="192x192" href="assets/icons/favicon/android-chrome-192x192.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="assets/icons/favicon/favicon-16x16.png">
-    <link rel="manifest" href="assets/icons/favicon/site.webmanifest">
-    <link rel="mask-icon" href="assets/icons/favicon/safari-pinned-tab.svg" color="#f5f5f4">
-    <link rel="shortcut icon" href="assets/icons/favicon/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="android-chrome-192x192.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="manifest" href="site.webmanifest">
+    <link rel="mask-icon" href="safari-pinned-tab.svg" color="#f5f5f4">
+    <link rel="shortcut icon" href="favicon.ico">
     <meta name="apple-mobile-web-app-title" content="Devma">
     <meta name="application-name" content="Devma">
     <meta name="msapplication-TileColor" content="#f5f5f4">
-    <meta name="msapplication-config" content="assets/icons/favicon/browserconfig.xml">
+    <meta name="msapplication-config" content="browserconfig.xml">
     <meta name="theme-color" content="#f5f5f4">
     
     <link href="style.css" rel="stylesheet">
@@ -27,17 +27,11 @@
     <meta name="description" content="Scopri i miei progetti, esplora il mio curriculum vitae, trova i miei profili social e i miei contatti. Se vuoi conoscermi o collaborare con me, questo è il posto giusto!">
 </head>
 <body class="body--loading">
-    <div id="loadingScreen">
-        <div id="loadingScreen__ombra"></div>
-        <img id="loadingScreen__logo" src="assets/icons/logoDevma.svg" class="imgNonCliccabile" alt="Logo" draggable="false">
-    </div>
-
     <header id="header" class="osservato">
         <nav id="header__menu">
             <a id="home" class="active" onclick="goTo(id)">Chi sono</a>
             <a id="portfolio" onclick="goTo(id)">Portfolio</a>
             <a id="cv" onclick="goTo(id)">Curriculum</a>
-            <a id="social" onclick="goTo(id)">Social</a>
             <a id="contatti" onclick="goTo(id)">Contatti</a>
         </nav>
         <div id="header__spaceIconaMenu">
@@ -55,87 +49,82 @@
         </div>
     </header>
     
+    <div id="loadingScreen">
+        <img id="loadingScreen__logo" src="assets/icons/logoDevma.svg" alt="Logo" draggable="false">
+    </div>
+
     <main id="pageContent">
         <section id="homePage">
-            <img id="homePage__fotoPresentazione" class="osservato imgNonCliccabile" src="assets/images/fotoPresentazione.webp" alt="Mia foto" draggable="false">
+            <img id="homePage__fotoPresentazione" class="osservato" src="assets/icons/logoDevma.svg" alt="Logo Devma" draggable="false">
             <article>
-                <h1 id="homePage__titolo" class="large osservato">Ehi, sono Emanuele.</h1>
-                <h1 id="homePage__titolo" class="small osservato">Ciao, sono<br>Emanuele</h1>
+                <h1 id="homePage__titolo" class="osservato">Ciao,&nbsp;sono Emanuele</h1>
                 <p id="homePage__text" class="osservato">Uno studente di ingegneria informatica<br>dell'Università Federico II di Napoli, nonchè<br>grande appassionato di programmazione.<br>Vediamo subito qualche mio progetto!</p>
             </article>
         </section>
         <section id="portfolioPage">
             <article class="portfolioPage__progetto osservato">
-                <img src="assets/images/progettoEsameDiStato.webp" class="imgNonCliccabile" alt="Foto sito" draggable="false">
-                <p>Un sito realizzato per il mio<br>esame di maturità, nel quale<br>mi presento con qualche foto<br>e introduco alcuni argomenti.</p>
-                <button onclick="apriUrl('https://emanueleciotola.github.io/EsameDiStato')">Dai un'occhiata</button>
+                <img src="assets/images/progettoEsameDiStato.webp" alt="Foto sito Esame di Stato" draggable="false">
+                <p>Sito realizzato per il mio esame<br>di maturità. Qui mi presento<br>alla commissione con delle foto<br>e introduco alcuni argomenti.</p>
+                <button onclick="apriUrl('https://emanueleciotola.github.io/EsameDiStato')">Scopri</button>
             </article>
             <article class="portfolioPage__progetto osservato">
-                <img src="assets/images/progettoGiochino.webp" class="imgNonCliccabile" alt="Foto sito" draggable="false">
-                <p>Un sito realizzato per comprendere<br>il funzionamento dei canvas. Un<br>semplice giochino molto divertente<br>ma allo stesso tempo complesso.</p>
-                <button onclick="apriUrl('https://emanueleciotola.github.io/Giochino')">Dai un'occhiata</button>
+                <img src="assets/images/progettoGiochino.webp" alt="Foto sito giochino" draggable="false">
+                <p>Sito realizzato in poche ore<br>per un compito in classe. Un<br>semplice giochino divertente<br>ma nel contempo complesso.</p>
+                <button onclick="apriUrl('https://emanueleciotola.github.io/Giochino')">Scopri</button>
             </article>
         </section>
-
-
-
         <section id="cvPage">
             <article>
-                <h1 id="cvPage__titolo" class="osservato">Curriculum Vitae</h1>
+                <h1 id="cvPage__titolo" class="osservato">Curriculum</h1>
                 <p id="cvPage__text" class="large osservato">Se vuoi sapere di più sul mio percorso di formazione e sulle<br>mie competenze ecco a te qualche altra informazione!</p>
                 <p id="cvPage__text" class="small osservato">Se vuoi sapere altro sul mio percorso<br>di formazione e sulle mie competenze<br>ecco a te qualche informazione!</p>
             </article>
             <div class="cvPage__spazioCompetenze osservato">
-                <a onclick="swipeAvantiBloccoCompetenze();">Ho esperienza con</a>
-                <div class="competenze__spazioCompetenze osservato">
-                    <div class="spazioCompetenze__bloccoIconeCompetenze osservato bloccoIconeCompetenze__primoBlocco bloccoCorrente">
-                        <img src="assets/icons/vscode.svg" class="cv__iconaCompetenze" alt="Visual Studio Code" title="Visual Studio Code" draggable="false">
-                        <img src="assets/icons/github.svg" class="cv__iconaCompetenze" alt="GitHub" title="GitHub" draggable="false">
-                        <img src="assets/icons/html5.svg" class="cv__iconaCompetenze" alt="HTML-5" title="HTML-5" draggable="false">
-                        <img src="assets/icons/css3.svg" class="cv__iconaCompetenze" alt="CSS-3" title="CSS-3" draggable="false">
-                        <img src="assets/icons/javascript.svg" class="cv__iconaCompetenze" alt="JavaScript" title="JavaScript" draggable="false">
+                <p id="spazioCompetenze__testo">Ho esperienza con</p>
+                <div class="competenze__spazioCompetenze">
+                    <div class="spazioCompetenze__bloccoIconeCompetenzeGrande">
+                        <div class="spazioCompetenze__bloccoIconeCompetenze">
+                            <img src="assets/icons/vscode.svg" class="cv__iconaCompetenze osservato" alt="Visual Studio Code" title="Visual Studio Code" draggable="false">
+                            <img src="assets/icons/github.svg" class="cv__iconaCompetenze osservato" alt="GitHub" title="GitHub" draggable="false">
+                            <img src="assets/icons/html5.svg" class="cv__iconaCompetenze osservato" alt="HTML-5" title="HTML-5" draggable="false">
+                            <img src="assets/icons/css3.svg" class="cv__iconaCompetenze osservato" alt="CSS-3" title="CSS-3" draggable="false">
+                            <img src="assets/icons/javascript.svg" class="cv__iconaCompetenze osservato" alt="JavaScript" title="JavaScript" draggable="false">
+                        </div>
+                        <div class="spazioCompetenze__bloccoIconeCompetenze">
+                            <img src="assets/icons/c.svg" class="cv__iconaCompetenze osservato" alt="C" title="C" draggable="false">
+                            <img src="assets/icons/c++.svg" class="cv__iconaCompetenze osservato" alt="C++" title="C++" draggable="false">
+                            <img src="assets/icons/dart.svg" class="cv__iconaCompetenze osservato" alt="Dart" title="Dart" draggable="false">
+                            <img src="assets/icons/flutter.svg" class="cv__iconaCompetenze osservato" alt="Flutter" title="Flutter" draggable="false">
+                            <img src="assets/icons/python.svg" class="cv__iconaCompetenze osservato" alt="Python" title="Python" draggable="false">
+                        </div>
                     </div>
-                    <div class="spazioCompetenze__bloccoIconeCompetenze osservato bloccoIconeCompetenze__secondoBlocco">
-                        <img src="assets/icons/c.svg" class="cv__iconaCompetenze" alt="C" title="C" draggable="false">
-                        <img src="assets/icons/c++.svg" class="cv__iconaCompetenze" alt="C++" title="C++" draggable="false">
-                        <img src="assets/icons/dart.svg" class="cv__iconaCompetenze" alt="Dart" title="Dart" draggable="false">
-                        <img src="assets/icons/flutter.svg" class="cv__iconaCompetenze" alt="Flutter" title="Flutter" draggable="false">
-                        <img src="assets/icons/python.svg" class="cv__iconaCompetenze" alt="Python" title="Python" draggable="false">
+                    <div class="spazioCompetenze__bloccoIconeCompetenzeGrande">
+                        <div class="spazioCompetenze__bloccoIconeCompetenze">
+                            <img src="assets/icons/photoshop.svg" class="cv__iconaCompetenze osservato" alt="Adobe Photoshop" title="Adobe Photoshop" draggable="false">
+                            <img src="assets/icons/illustrator.svg" class="cv__iconaCompetenze osservato" alt="Adobe Illustrator" title="Adobe Illustrator" draggable="false">
+                            <img src="assets/icons/premiere_pro.svg" class="cv__iconaCompetenze osservato" alt="Adobe Premiere" title="Adobe Premiere" draggable="false">
+                            <img src="assets/icons/figma.svg" class="cv__iconaCompetenze osservato" alt="Figma" title="Figma" draggable="false">
+                            <img src="assets/icons/google-search-console.svg" class="cv__iconaCompetenze osservato" alt="Google Search Console" title="Google Search Console" draggable="false">
+                        </div>
+                        <div class="spazioCompetenze__bloccoIconeCompetenze">
+                            <img src="assets/icons/Windows.svg" class="cv__iconaCompetenze osservato" alt="Windows 11" title="Windows 11" draggable="false">
+                            <img src="assets/icons/linux.svg" class="cv__iconaCompetenze osservato" alt="Linux" title="Linux" draggable="false">
+                            <img src="assets/icons/word.svg" class="cv__iconaCompetenze osservato" alt="Microsoft Word" title="Microsoft Word" draggable="false">
+                            <img src="assets/icons/powerpoint.svg" class="cv__iconaCompetenze osservato" alt="Microsoft PowerPoint" title="Microsoft PowerPoint" draggable="false">
+                            <img src="assets/icons/excel.svg" class="cv__iconaCompetenze osservato" alt="Microsoft Excel" title="Microsoft Excel" draggable="false">
+                        </div>
                     </div>
-                    <div class="spazioCompetenze__bloccoIconeCompetenze osservato bloccoIconeCompetenze__terzoBlocco">
-                        <img src="assets/icons/photoshop.svg" class="cv__iconaCompetenze" alt="Adobe Photoshop" title="Adobe Photoshop" draggable="false">
-                        <img src="assets/icons/illustrator.svg" class="cv__iconaCompetenze" alt="Adobe Illustrator" title="Adobe Illustrator" draggable="false">
-                        <img src="assets/icons/premiere_pro.svg" class="cv__iconaCompetenze" alt="Adobe Premiere" title="Adobe Premiere" draggable="false">
-                        <img src="assets/icons/figma.svg" class="cv__iconaCompetenze" alt="Figma" title="Figma" draggable="false">
-                        <img src="assets/icons/google-search-console.svg" class="cv__iconaCompetenze" alt="Google Search Console" title="Google Search Console" draggable="false">
-                    </div>
-                    <div class="spazioCompetenze__bloccoIconeCompetenze osservato bloccoIconeCompetenze__quartoBlocco">
-                        <img src="assets/icons/Windows.svg" class="cv__iconaCompetenze" alt="Windows 11" title="Windows 11" draggable="false">
-                        <img src="assets/icons/linux.svg" class="cv__iconaCompetenze" alt="Linux" title="Linux" draggable="false">
-                        <img src="assets/icons/word.svg" class="cv__iconaCompetenze" alt="Microsoft Word" title="Microsoft Word" draggable="false">
-                        <img src="assets/icons/powerpoint.svg" class="cv__iconaCompetenze" alt="Microsoft PowerPoint" title="Microsoft PowerPoint" draggable="false">
-                        <img src="assets/icons/excel.svg" class="cv__iconaCompetenze" alt="Microsoft Excel" title="Microsoft Excel" draggable="false">
-                    </div>
-                </div>
-                <div class="bloccoIconeCompetenze__indicatoreBloccoCompetenze">
-                    <div class="bloccoIconeCompetenze__primoBlocco bloccoCorrente" onclick="swipeBloccoIconeCompetenze('bloccoIconeCompetenze__primoBlocco');"></div>
-                    <div class="bloccoIconeCompetenze__secondoBlocco" onclick="swipeBloccoIconeCompetenze('bloccoIconeCompetenze__secondoBlocco');"></div>
-                    <div class="bloccoIconeCompetenze__terzoBlocco" onclick="swipeBloccoIconeCompetenze('bloccoIconeCompetenze__terzoBlocco');"></div>
-                    <div class="bloccoIconeCompetenze__quartoBlocco" onclick="swipeBloccoIconeCompetenze('bloccoIconeCompetenze__quartoBlocco');"></div>
                 </div>
             </div>
-            <button id="cvPage__bottoneScaricaCV" class="osservato">Scarica CV</button>
+            <button id="cvPage__bottoneScaricaCV" class="osservato">Scarica CV</button> <!-- TODO inserire cv da scaricare -->
         </section>
-
-
-        
-        <section id="socialPage">
+        <section id="contattiPage">
             <article>
-                <h1 id="socialPage__titolo" class="osservato">I miei social</h1>
-                <p id="socialPage__text" class="large osservato">Vuoi leggere il mio codice? Avere qualche altra informazione?<br>Entrare nel mio piccolo mondo digitale? Ora sai come fare!</p>
-                <p id="socialPage__text" class="small osservato">Vuoi leggere il mio codice? Avere qualche<br>altra informazione? Entrare nel mio piccolo<br>mondo digitale? Ora sai come farlo!</p>
+                <h1 id="contattiPage__titolo" class="osservato">Contatti</h1>
+                <p id="contattiPage__text" class="large osservato">Vuoi leggere il mio codice? Avere altre informazioni?<br>Collaborare per un progetto? Ora sai come fare!</p>
+                <p id="contattiPage__text" class="small osservato">Vuoi leggere il mio codice? Avere<br>altre informazioni? Collaborare per<br>un progetto? Ora sai come fare!</p>
             </article>
-            <div class="socialPage__socialSpace">
+            <div class="contattiPage__socialSpace">
                 <div class="socialSpace__social osservato">
                     <img class="social__socialIcon" src="assets/icons/github.svg" alt="GitHub" draggable="false" onclick="apriUrl('https://github.com/Manux895')">
                     <button onclick="apriUrl('https://github.com/EmanueleCiotola')">GitHub</button>
@@ -161,14 +150,12 @@
                     <button onclick="apriUrl('https://www.facebook.com/emanuele.ciotola.56')">Facebook</button>
                 </div>
             </div>
-        </section>
-        <section id="contattiPage">
-            <article>
-                <h1 id="contattiPage__titolo" class="osservato">La mia e-mail</h1>
-                <p id="contattiPage__text" class="large osservato">Se hai proposte, idee, consigli, o se vuoi collaborare<br>per qualche progetto, puoi contattarmi qui!</p>
-                <p id="contattiPage__text" class="small osservato">Se hai proposte, idee, consigli,<br>o se vuoi collaborare per qualche<br>progetto, puoi contattarmi qui!</p>
+            <article class="contattiPage__emailSpace">
+                <div class="contattiPage__emailBox osservato">
+                    <p>Puoi contattarmi a questa email!</p>
+                    <button id="contattiPage__bottoneContattami">Contattami</button>
+                </div>
             </article>
-            <button id="contattiPage__bottoneContattami" class="osservato" onclick="apriUrl('mailto:Ema.Ciotola.Dev@gmail.com?')">Contattami</button>
         </section>
     </main>
 
