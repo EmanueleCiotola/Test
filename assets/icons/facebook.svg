@@ -1,12 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- Generator: Adobe Illustrator 27.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
-<svg version="1.1" id="Livello_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-	 viewBox="0 0 200 200" style="enable-background:new 0 0 200 200;" xml:space="preserve">
-<style type="text/css">
-	.st0{fill:#F5F5F4;}
-</style>
-<path id="Vector" class="st0" d="M162.5,0c10.3,0,19.2,3.7,26.5,11c7.3,7.3,11,16.2,11,26.5v125c0,10.3-3.7,19.2-11,26.5
-	c-7.3,7.3-16.2,11-26.5,11H138v-77.5h25.9l3.9-30.2H138V73c0-4.9,1-8.5,3.1-10.9c2-2.4,6-3.6,11.9-3.6l15.9-0.1v-27
-	c-5.5-0.8-13.2-1.2-23.2-1.2c-11.8,0-21.2,3.5-28.3,10.4c-7.1,6.9-10.6,16.8-10.6,29.4v22.3h-26v30.2h26V200H37.5
-	c-10.3,0-19.2-3.7-26.5-11c-7.3-7.3-11-16.2-11-26.5v-125C0,27.2,3.7,18.3,11,11C18.3,3.7,27.2,0,37.5,0H162.5z"/>
+<svg version="1.2" baseProfile="tiny" id="Livello_1"
+	 xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 760 760"
+	 overflow="visible" xml:space="preserve">
+<g id="Layer_1">
+</g>
+<g id="Layer_2">
+	<g>
+		<path fill="#1877F2" d="M380,0c-471.1,13.8-519.2,674.9-59.7,760l0,0l0,0H380h59.7l0,0C899.3,674.8,851,13.8,380,0z"/>
+		<path fill="#F5F5F4" d="M439.7,492.8h89l16.9-110.5H439.7v-71.7c0-30.2,14.8-59.7,62.2-59.7h48.2v-94.1
+			C446.9,138.2,323,143.9,320.3,298.1v84.2h-97v110.5h97c0,0,0,267.2,0,267.2H380h59.7l0,0l0,0V492.8z"/>
+	</g>
+</g>
 </svg>
