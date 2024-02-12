@@ -33,7 +33,7 @@ body.body--loading { overflow: hidden; }
 section { overflow: hidden; padding-bottom: 8rem; }
 section:nth-child(1) { padding-bottom: 2rem; } /* portfolioPage */
 section:nth-child(2) { padding-top: 1rem; } /* cvPage */
-section:last-child { padding-bottom: 5rem; }
+section:last-child { padding-bottom: 5rem; } /* contattiPage */
 @media (max-width: 1024px) { section:last-child { padding-bottom: 6vh; } } /* contattiPage */
 @media (min-height: 1024px) { section:last-child { padding-bottom: 25vh; } } /* contattiPage */
 
@@ -101,14 +101,14 @@ img, button, input, label, a {
     align-items: center;
     z-index: 9999;
 }
-#loadingScreen.loadingScreen--hidden {
-    height: 0;
-    display: none;
-}
+#loadingScreen.loadingScreen--loaded { animation: dissolviLogo .25s; }
+#loadingScreen.loadingScreen--hidden { height: 0; display: none; }
 
-#loadingScreen__logo { width: 40vw; max-height: 45vh; z-index: 9999; animation: ombraPulsante 1s infinite; }
+#loadingScreen__logo { width: 30vw; max-height: 35vh; z-index: 9999; }
+#loadingScreen__logo.loadingScreen__logo--inMovimento { animation: logoPulsante 1s infinite; }
 
-@keyframes ombraPulsante { 0%, 100% { transform: scale(80%); } 50% { transform: scale(100%); } }
+@keyframes logoPulsante { 50% { transform: scale(120%); } 100% { transform: scale(100%); } }
+@keyframes dissolviLogo { 0% { opacity: 1; } 100% { opacity: 0; } }
 /* stile loadingScreen */
 
 
@@ -126,8 +126,8 @@ img, button, input, label, a {
     transform: translateY(-4rem);
     opacity: 0;
     transition: background-color .15s var(--transizioneColore) 250ms,
-    transform .4s var(--transizioneConRimbalzo) 300ms,
-    opacity .4s var(--transizioneSenzaRimbalzo) 300ms !important;
+    transform .35s var(--transizioneSenzaRimbalzo) 300ms,
+    opacity .35s var(--transizioneSenzaRimbalzo) 300ms !important;
     z-index: 100;
 }
 
