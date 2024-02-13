@@ -4,7 +4,7 @@
     --disabledColor: #BDBDC5;
     --coloreOmbra: rgba(0, 0, 0, 0.35);
     --cardColor: #232148;
-    --buttonColor: #5367FE;
+    --buttonColor: #4F61EE;
     --navbarColor: #181532e6;
     --modalColor: #18153266;
     --transizioneConRimbalzo: cubic-bezier(0.3, 0, 0.25, 1.5);
@@ -322,7 +322,7 @@ img, button, input, label, a {
 
 .contattiPage__socialSpace {
     display: grid;
-    grid-template-columns: repeat(3, 15rem);
+    grid-template-columns: repeat(3, 13.5rem);
     grid-template-rows: repeat(2, 1fr);
     gap: 2rem;
     justify-content: center;
@@ -332,11 +332,11 @@ img, button, input, label, a {
     background-color: var(--cardColor);
     box-shadow: var(--coloreOmbra) 0px 5px 15px;
     border-radius: 1.5rem;
-    padding: .5rem .5rem;
+    padding: .5rem .65rem;
     display: flex;
     align-items: center;
-    justify-content: space-around;
-    width: 15rem;
+    justify-content: space-between;
+    width: 13.5rem;
     opacity: 0;
     transform: translateY(4rem);
 }
@@ -368,7 +368,7 @@ img, button, input, label, a {
 .contattiPage__emailBox.mostrato{ transition-delay: 900ms !important; }
 
 @media (max-width: 1024px) {
-    .contattiPage__socialSpace { grid-template-columns: repeat(2, 15rem); grid-template-rows: repeat(3, 1fr); }
+    .contattiPage__socialSpace { grid-template-columns: repeat(2, 13.5rem); grid-template-rows: repeat(3, 1fr); }
     .socialSpace__social:nth-child(2).mostrato { transition-delay: 400ms !important; }
     .socialSpace__social:nth-child(3).mostrato { transition-delay: 300ms !important; }
     .socialSpace__social:nth-child(4).mostrato { transition-delay: 400ms !important; }
@@ -378,7 +378,7 @@ img, button, input, label, a {
     .contattiPage__emailBox.mostrato{ transition-delay: 500ms !important; }
 }
 @media (max-width: 720px) {
-    .contattiPage__socialSpace { grid-template-columns: repeat(1, 15rem); grid-template-rows: repeat(6, 1fr); gap: 1.5rem; }
+    .contattiPage__socialSpace { grid-template-columns: repeat(1, 13.5rem); grid-template-rows: repeat(6, 1fr); gap: 1.5rem; }
     .socialSpace__social:nth-child(2).mostrato { transition-delay: 300ms !important; }
     .socialSpace__social:nth-child(3).mostrato { transition-delay: 300ms !important; }
     .socialSpace__social:nth-child(4).mostrato { transition-delay: 300ms !important; }
