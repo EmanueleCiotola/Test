@@ -7,15 +7,13 @@ window.addEventListener("load", function() {
     var delay = Math.max(2000 - loadTime, 0);
 
     setTimeout(function() {
-        //inizia animazione opacità
+        // fine animazione logo
         loadingScreenLogo.classList.remove("loadingScreen__logo--inMovimento");
-        loadingScreen.classList.add("loadingScreen--loaded");
-        
-        // animazione opacità prima di rimuovere
+        // rimozione schermata caricamento
+        loadingScreen.classList.add("loadingScreen--hidden");
+
+        // aspetta effetto opacità
         setTimeout(() => {
-            // rimozione loadingScreen
-            loadingScreen.classList.add("loadingScreen--hidden");
-        
             // gestione items osservati
             var elementiDaOsservare = document.querySelectorAll('.osservato');
             var callback = function(items) {

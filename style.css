@@ -100,15 +100,14 @@ img, button, input, label, a {
     justify-content: center;
     align-items: center;
     z-index: 9999;
+    transition: all .25s var(--transizioneSenzaRimbalzo); 
 }
-#loadingScreen.loadingScreen--loaded { animation: dissolviLogo .25s; }
-#loadingScreen.loadingScreen--hidden { height: 0; display: none; }
+#loadingScreen.loadingScreen--hidden { opacity: 0; visibility: hidden; }
 
 #loadingScreen__logo { width: 30vw; max-height: 35vh; z-index: 9999; }
 #loadingScreen__logo.loadingScreen__logo--inMovimento { animation: logoPulsante 1s infinite; }
 
 @keyframes logoPulsante { 50% { transform: scale(120%); } 100% { transform: scale(100%); } }
-@keyframes dissolviLogo { 0% { opacity: 1; } 100% { opacity: 0; } }
 /* stile loadingScreen */
 
 
@@ -174,12 +173,12 @@ img, button, input, label, a {
 
 @media (max-width: 600px) {
     #header.header__menu--open {
-        background-color: var(--coloreSecondario);
+        background-color: var(--cardColor);
         transition: background-color .15s var(--transizioneSenzaRimbalzo) 0ms !important;
     }
 
     #header__menu {
-        background-color: var(--coloreSecondario);
+        background-color: var(--cardColor);
         width: 100%;
         height: auto;
         transform: scaleY(0);
@@ -397,13 +396,14 @@ img, button, input, label, a {
 
 /* stile modalPopUp */
 #modalPopUp {
-    transition: all 100ms var(--transizioneColore);
+    transition: all .1s var(--transizioneColore);
     z-index: 50;
     position: fixed;
     top: 0;
     left: 0;
-    height: 0;
+    height: 100%;
     width: 100%;
+    visibility: hidden;
 }
-#modalPopUp.modalPopUp--open { backdrop-filter: blur(4px); background-color: var(--modalColor); height: 100vh; }
+#modalPopUp.modalPopUp--open { backdrop-filter: blur(4px); background-color: var(--modalColor); visibility: visible; }
 /* stile modalPopUp */
