@@ -99,8 +99,8 @@ img, button, input, label, a {
     display: flex;
     justify-content: center;
     align-items: center;
-    z-index: 9999;
     transition: all .25s var(--transizioneSenzaRimbalzo); 
+    z-index: 9999;
 }
 #loadingScreen.loadingScreen--hidden { opacity: 0; visibility: hidden; }
 
@@ -287,28 +287,31 @@ img, button, input, label, a {
     border-radius: 1.5rem;
     width: 86.5vw;
     max-width: calc(960px + 6.5vw);
-    padding: 1.8rem 1.8rem 1.8rem 1.8rem !important;
+    padding: 1.8rem;
     margin: auto;
     opacity: 0;
     transform: translateY(4rem);
 }
 
-.competenze__spazioCompetenze { display: flex; flex-direction: column; gap: 1.8rem; margin: 2rem 0 2.3rem 0; }
-
-.spazioCompetenze__bloccoIconeCompetenzeGrande, .spazioCompetenze__bloccoIconeCompetenze { display: flex; justify-content: center; gap: 1.8rem; }
+.competenze__spazioCompetenze {
+    display: grid;
+    grid-template-columns: repeat(10, auto);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 1.8rem;
+    margin: 2rem 0 2.3rem 0;
+    justify-content: center;
+}
 
 .cv__iconaCompetenze { width: 2.5rem; }
 
 @media (max-width: 1024px) {
-    .cvPage__spazioCompetenze { width: 24rem; padding: 1.8rem 1.8rem 2.1rem 1.8rem; }
+    .cvPage__spazioCompetenze { width: 24rem; }
     #spazioCompetenze__testo { margin-bottom: 1.5rem; }
-    .spazioCompetenze__bloccoIconeCompetenzeGrande { flex-direction: column; }
+    .competenze__spazioCompetenze { grid-template-columns: repeat(5, auto); grid-template-rows: repeat(4, 1fr); }
 }
 @media (max-width: 480px) {
     .cvPage__spazioCompetenze { width: 20rem; }
-    .competenze__spazioCompetenze,
-    .spazioCompetenze__bloccoIconeCompetenzeGrande,
-    .spazioCompetenze__bloccoIconeCompetenze { gap: 1.4rem; }
+    .competenze__spazioCompetenze { gap: 1.4rem; }
     .cv__iconaCompetenze { width: 2.2rem; }
 }
 /* stile cvPage */
