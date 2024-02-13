@@ -185,9 +185,11 @@ img, button, input, label, a {
         transform-origin: top;
         position: absolute;
         top: 4rem;
-        flex-direction: column;
-        justify-content: center;
+        display: grid;
+        grid-template-columns: repeat(1, auto);
+        grid-template-rows: repeat(4, 1fr);
         gap: 2.5rem;
+        justify-content: center;
         overflow: hidden;
         z-index: 100;
         opacity: 90%;
