@@ -224,9 +224,8 @@ img, button, input, label, a {
 }
 
 #homePage__fotoPresentazione {
-    width: 7.5rem;
-    border-radius: 100%;
-    margin-bottom: 1.5rem;
+    width: 8rem;
+    margin-bottom: 1rem;
     opacity: 0;
     transform: translateY(4rem);
 }
