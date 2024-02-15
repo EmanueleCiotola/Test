@@ -105,9 +105,23 @@ img, button, input, label, a {
 #loadingScreen.loadingScreen--hidden { opacity: 0; visibility: hidden; }
 
 #loadingScreen__logo { width: 30vw; max-height: 35vh; z-index: 9999; }
-#loadingScreen__logo.loadingScreen__logo--inMovimento { animation: logoPulsante 1s infinite; }
 
-@keyframes logoPulsante { 50% { transform: scale(120%); } 100% { transform: scale(100%); } }
+
+#loadingScreen__logo__cpu { animation: animazioneCPU 1s forwards; transform-origin: center; animation-delay: .5s; }
+
+#loadingScreen__logo .lineeLobo path { animation: animazioneLineeLobo 1s infinite alternate; animation-delay: .5s; }
+#loadingScreen__logo .lineaLobo__sopra { transform-origin: bottom; }
+#loadingScreen__logo .lineaLobo__destra { transform-origin: left; }
+#loadingScreen__logo .lineaLobo__sinistra { transform-origin: right; }
+#loadingScreen__logo .lineaLobo__sotto { transform-origin: top; }
+
+#loadingScreen__logo .lobo { animation: animazioneLobo 1s infinite alternate; animation-delay: .5s; }
+#loadingScreen__logo .lobo.dx { transform-origin: right; }
+#loadingScreen__logo .lobo.sx { transform-origin: left; }
+
+@keyframes animazioneCPU { 0% { fill: var(--disabledColor); } 60%, 100% { fill: var(--colorePrincipale); } }
+@keyframes animazioneLineeLobo { 0%, 30% { fill: var(--disabledColor); } 100% { fill: var(--colorePrincipale); } }
+@keyframes animazioneLobo { 0%, 30% { stroke: var(--disabledColor); } 100% { stroke: var(--colorePrincipale); } }
 /* stile loadingScreen */
 
 

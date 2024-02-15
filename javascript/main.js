@@ -1,14 +1,11 @@
 // gestione degli items osservati dopo il caricamento della pagina (utile per animazioni)
 const loadingScreen = document.getElementById("loadingScreen");
-const loadingScreenLogo = document.getElementById("loadingScreen__logo");
-window.addEventListener("load", function() {
+function onLoadHandler() {
     // loadingScreen di almeno un secondo anche con caricamenti veloci
     var loadTime = Date.now() - performance.timeOrigin;
     var delay = Math.max(2000 - loadTime, 0);
 
     setTimeout(function() {
-        // fine animazione logo
-        loadingScreenLogo.classList.remove("loadingScreen__logo--inMovimento");
         // rimozione schermata caricamento
         loadingScreen.classList.add("loadingScreen--hidden");
 
@@ -33,9 +30,12 @@ window.addEventListener("load", function() {
 
             // permetti overflow nella pagina caricata
             document.body.classList.remove("body--loading");
-        }, 250);
+        }, 500);
     }, delay);
-});
+    window.removeEventListener("load", onLoadHandler);
+}
+// Aggiunta dell'event listener
+window.addEventListener("load", onLoadHandler);
 
 
 
