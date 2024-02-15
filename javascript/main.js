@@ -46,3 +46,21 @@ function apriUrl(url) { window.open(url, "_blank"); }
 
 // evitare scroll automatico quando si ricarica pagina
 history.scrollRestoration = "manual";
+
+
+
+// gestione download
+function download(daScaricare, nomeFileScaricato) {  
+    // Crea un link nascosto
+    var hiddenLink = document.createElement("a");
+    hiddenLink.style.display = "none"; // Nascondi il link
+    hiddenLink.href = daScaricare;
+    hiddenLink.download = nomeFileScaricato; // Nome del file dopo il download
+    document.body.appendChild(hiddenLink);
+  
+    // Simula un clic sul link
+    hiddenLink.click();
+  
+    // Rimuovi il link dopo il download
+    document.body.removeChild(hiddenLink);
+  }
