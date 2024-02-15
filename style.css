@@ -104,7 +104,7 @@ img, button, input, label, a {
 }
 #loadingScreen.loadingScreen--hidden { opacity: 0; visibility: hidden; }
 
-#loadingScreen__logo { width: 30vw; max-height: 35vh; z-index: 9999; }
+#loadingScreen__logo { width: 40vw; max-height: 45vh; z-index: 9999; }
 
 
 #loadingScreen__logo__cpu { animation: animazioneCPU 1s forwards; transform-origin: center; animation-delay: .5s; }
@@ -229,7 +229,7 @@ img, button, input, label, a {
 
 /* stile homePage */
 #homePage {
-    height: 68vh;
+    height: 70vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -238,7 +238,7 @@ img, button, input, label, a {
 }
 
 #homePage__fotoPresentazione {
-    width: 8rem;
+    width: 10rem;
     margin-bottom: 1rem;
     opacity: 0;
     transform: translateY(4rem);
