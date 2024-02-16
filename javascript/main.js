@@ -30,7 +30,7 @@ function onLoadHandler() {
 
             // permetti overflow nella pagina caricata
             document.body.classList.remove("body--loading");
-        }, 500);
+        }, 250);
     }, delay);
     window.removeEventListener("load", onLoadHandler);
 }
