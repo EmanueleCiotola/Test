@@ -102,7 +102,7 @@ img, button, input, label, a {
     transition: all .25s var(--transizioneSenzaRimbalzo); 
     z-index: 9999;
 }
-#loadingScreen.loadingScreen--hidden { opacity: 0.1; visibility: hidden; }
+#loadingScreen.loadingScreen--hidden { opacity: 0; visibility: hidden; }
 
 #loadingScreen__logo { width: 40vw; max-height: 45vh; z-index: 9999; }
 
