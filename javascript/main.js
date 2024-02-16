@@ -3,7 +3,7 @@ const loadingScreen = document.getElementById("loadingScreen");
 function onLoadHandler() {
     // loadingScreen di almeno un secondo anche con caricamenti veloci
     var loadTime = Date.now() - performance.timeOrigin;
-    var delay = Math.max(1500 - loadTime, 0);
+    var delay = Math.max(2000 - loadTime, 0);
 
     setTimeout(function() {
         // rimozione schermata caricamento
