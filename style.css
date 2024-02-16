@@ -66,6 +66,7 @@ img, button, input, label, a {
     -ms-user-select: none; /* IE, ms-edge */
 }
 
+.osservato { will-change: transform, opacity; }
 .mostrato {
     transition: transform .4s var(--transizioneConRimbalzo), opacity .4s var(--transizioneSenzaRimbalzo) !important;
     transition-delay: 300ms !important;
@@ -140,6 +141,7 @@ img, button, input, label, a {
     padding-right: 1.5rem;
     transform: translateY(-4rem);
     opacity: 0;
+    will-change: background-color, transform, opacity;
     transition: background-color .15s var(--transizioneColore) 250ms,
     transform .35s var(--transizioneSenzaRimbalzo) 300ms,
     opacity .35s var(--transizioneSenzaRimbalzo) 300ms !important;
@@ -149,8 +151,9 @@ img, button, input, label, a {
 #header__spaceIconaMenu { visibility: hidden; display: flex; justify-content: flex-end; align-items: center; height: 100%; }
 
 /* stile icona animata hamburger menu */
-.container.top { transform: translateY(-4px) scaleX(.88235); }
-.container.bottom { transform: translateY(4px) scaleX(.88235); }
+.container.top { transform: translateY(-4px) scaleX(.88235); will-change: transform; }
+.container.bottom { transform: translateY(4px) scaleX(.88235); will-change: transform; }
+#header__iconaMenu { will-change: transform; }
 #header__iconaMenu:checked + label .container .line.bottom { transform: rotateZ(45deg); }
 #header__iconaMenu:checked + label .container .line.top { transform: rotateZ(-45deg); }
 #header__iconaMenu:checked + label .container.bottom { transform: translateY(0) scale(85%); }
