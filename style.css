@@ -244,6 +244,8 @@ img, button, input, label, a {
     margin-bottom: 1rem;
     opacity: 0;
     transform: translateY(4rem);
+    transition: transform .35s var(--transizioneSenzaRimbalzo), opacity .35s var(--transizioneSenzaRimbalzo) !important;
+    transition-delay: 300ms !important;
 }
 
 #homePage__titolo { opacity: 0; transform: translateX(4rem); transition-delay: 650ms !important; padding: 0 4rem; }
