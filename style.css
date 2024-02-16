@@ -97,6 +97,7 @@ img, button, input, label, a {
     height: 100%;
     width: 100%;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     transition: all .25s var(--transizioneSenzaRimbalzo); 
@@ -121,6 +122,8 @@ img, button, input, label, a {
 @keyframes animazioneCPU { 0% { fill: var(--disabledColor); } 60%, 100% { fill: var(--colorePrincipale); } }
 @keyframes animazioneLineeLobo { 0%, 30% { fill: var(--disabledColor); } 100% { fill: var(--colorePrincipale); } }
 @keyframes animazioneLobo { 0%, 30% { stroke: var(--disabledColor); } 100% { stroke: var(--colorePrincipale); } }
+
+#loadingScreen__testo { color: var(--coloreSecondario); font-size: .5rem; }
 /* stile loadingScreen */
 
 
